@@ -9,5 +9,5 @@
     "rootDir": ".",
     "declaration": false
   },
-  "include": ["parse-icons.ts"]
+  "include": ["scripts/parse-icons.ts", "cli.ts"]
 }
