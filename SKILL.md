@@ -5,7 +5,11 @@ description: A dead simple CLI to search Solar icons. Built for agents.
 
 # search-solar — Agent Skill
 
-You have access to the `search-solar` CLI for finding Solar icons by name, category, or tag.
+You have access to the `search-solar` CLI for finding Solar icons by name, category, or tag. If `search-solar` isn't available globally, prefix all commands with `npx`/`pnpm dlx`/`bunx`.
+
+If the CLI is not available, you can install it with:
+
+`npm install search-solar -g`
 
 ## When to use this skill
 
