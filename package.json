@@ -1,18 +1,26 @@
 {
   "name": "search-solar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A dead simple CLI to search Solar icons. Built for agents.",
   "type": "module",
   "bin": {
     "search-solar": "./dist/cli.js"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc scripts/parse-icons.ts cli.ts --outDir dist --esModuleInterop --module NodeNext --moduleResolution NodeNext --target ES2020 --declaration false && node -e \"const fs=require('fs');fs.mkdirSync('dist/data',{recursive:true});fs.copyFileSync('data/icons.json','dist/data/icons.json')\"",
     "parse": "npm run build && node dist/parse-icons.js",
     "prepublishOnly": "npm run build"
   },
-  "keywords": ["solar", "icons", "cli", "search", "agents"],
+  "keywords": [
+    "solar",
+    "icons",
+    "cli",
+    "search",
+    "agents"
+  ],
   "author": "bittere",
   "license": "MIT",
   "devDependencies": {
