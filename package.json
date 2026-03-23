@@ -6,6 +6,10 @@
   "bin": {
     "search-solar": "./dist/cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bittere/search-solar"
+  },
   "files": [
     "dist"
   ],
