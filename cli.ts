@@ -20,12 +20,20 @@ interface IconData {
 
 const SEP = "─".repeat(60);
 
+function toTitleCase(str: string): string {
+  return str
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join("");
+}
+
 function formatIcon(icon: IconData): string {
+  const titleName = toTitleCase(icon.name);
   return [
     `name:     ${icon.name}`,
     `category: ${icon.category}`,
     `tags:     ${[...icon.tags, ...icon.categoryTags].join(", ")}`,
-    `import:   import { ${icon.name} } from "@solar-icons/react-perf/<${STYLES.join("|")}>"`,
+    `import:   import { ${titleName} } from "@solar-icons/react-perf/<${STYLES.join("|")}>"`,
   ].join("\n");
 }
 
