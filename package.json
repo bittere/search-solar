@@ -4,11 +4,11 @@
   "description": "A dead simple CLI to search Solar icons. Built for agents.",
   "type": "module",
   "bin": {
-    "search-solar": "./dist/cli.js"
+    "search-solar": "dist/cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bittere/search-solar"
+    "url": "git+https://github.com/bittere/search-solar.git"
   },
   "files": [
     "dist"
