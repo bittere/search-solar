@@ -1,28 +1,22 @@
 {
   "name": "search-solar",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A dead simple CLI to search Solar icons. Built for agents.",
   "type": "module",
-  "main": "dist/cli.js",
   "bin": {
     "search-solar": "./dist/cli.js"
   },
+  "files": ["dist"],
   "scripts": {
-    "build": "tsc scripts/parse-icons.ts cli.ts --outDir dist --esModuleInterop --module NodeNext --moduleResolution NodeNext --target ES2020 --declaration false && mkdir dist\\data && node -e \"import('fs').then(fs=>fs.copyFileSync('data/icons.json','dist/data/icons.json'))\"",
-    "parse": "npm run build && node dist/parse-icons.js"
+    "build": "tsc scripts/parse-icons.ts cli.ts --outDir dist --esModuleInterop --module NodeNext --moduleResolution NodeNext --target ES2020 --declaration false && node -e \"const fs=require('fs');fs.mkdirSync('dist/data',{recursive:true});fs.copyFileSync('data/icons.json','dist/data/icons.json')\"",
+    "parse": "npm run build && node dist/parse-icons.js",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [
-    "solar",
-    "icons",
-    "cli",
-    "search",
-    "agents"
-  ],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["solar", "icons", "cli", "search", "agents"],
+  "author": "bittere",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^25.5.0",
-    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
