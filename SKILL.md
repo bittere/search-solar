@@ -1,3 +1,8 @@
+---
+name: search-solar
+description: A dead simple CLI to search Solar icons. Built for agents. 
+---
+
 # search-solar — Agent Skill
 
 You have access to the `search-solar` CLI for finding Solar icons by name, category, or tag.
