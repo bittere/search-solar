@@ -1,11 +1,17 @@
 # search-solar
 
-CLI tool for searching [Solar icons (`react-perf`)](https://www.npmjs.com/package/@solar-icons/react-perf).
+A dead simple CLI to search [Solar icons (`react-perf`)](https://www.npmjs.com/package/@solar-icons/react-perf). Built for agents. 
 
 ## Install
 
 ```bash
 npm install -g search-solar
+```
+
+Recommended: install the skill as well.
+
+```bash
+npx skills add bittere/search-solar
 ```
 
 ## Commands
