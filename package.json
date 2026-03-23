@@ -1,6 +1,6 @@
 {
   "name": "search-solar",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A dead simple CLI to search Solar icons. Built for agents.",
   "type": "module",
   "bin": {
